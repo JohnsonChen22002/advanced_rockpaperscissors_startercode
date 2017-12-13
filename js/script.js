@@ -31,11 +31,76 @@ var choice = ["rock", "paper", "scissors"]
 
 // DOCUMENT READY FUNCTION
 $(document).ready(function() {
-        $("#button").click(function() {
-                var input = $("#input").val();
-                $("#record").append(input);
-                 $("#input").hide();
-                  $("#button").hide();
-                   $("#please").hide();
-        });
-});
+            // $("#button").click(function() {
+            //         var input = $("#input").val();
+            //         $("#record").append(input);
+            //          $("#input").hide();
+            //           $("#button").hide();
+            //           $("#please").hide();
+            // });
+
+            $("#button").click(function() {
+                        var choice = ["rock", "paper", "scissors"]
+                        var RPS = Math.floor((Math.random() * 3));
+                        var computerchoice = choice[RPS]
+                        console.log(computerchoice);
+                        var input = $("#input").val().toLowerCase();
+                        console.log("test");
+//--------------------------rock--------------------------
+                        if (input === "rock" && computerchoice === "rock") {
+                            var input = $("#input").val();
+                            $("#record").append("It's a Tie!");
+                            $("#input").hide();
+                            $("#button").hide();
+                            $("#please").hide();
+                        }
+                        else if (input === "rock" && computerchoice === "paper") {
+                            var input = $("#input").val();
+                            $("#record").append("You Win!");
+                            $("#button").hide();
+                            $("#please").hide();
+                        }
+                        else if (input === "rock" && computerchoice === "scissors") {
+                            var input = $("#input").val();
+                            $("#record").append("Computer Win!");
+                            $("#button").hide();
+                            $("#please").hide();
+//--------------------------paper--------------------------
+                            if (input === "paper" && computerchoice === "paper") {
+                            var input = $("#input").val();
+                            $("#record").append("It's a Tie!");
+                            $("#input").hide();
+                            $("#button").hide();
+                            $("#please").hide();
+                        }
+                        else if (input === "paper" && computerchoice === "rock") {
+                            var input = $("#input").val();
+                            $("#record").append("You Win!");
+                            $("#button").hide();
+                            $("#please").hide();
+                        }
+                        else if (input === "paper" && computerchoice === "scissors") {
+                            var input = $("#input").val();
+                            $("#record").append("Computer Win!");
+                            $("#button").hide();
+                            $("#please").hide();
+//--------------------------scissors--------------------------
+                            if (input === "scissors" && computerchoice === "scissors") {
+                            var input = $("#input").val();
+                            $("#record").append("It's a Tie!");
+                            $("#input").hide();
+                            $("#button").hide();
+                            $("#please").hide();
+                        }
+                        else if (input === "scissors" && computerchoice === "paper") {
+                            var input = $("#input").val();
+                            $("#record").append("You Win!");
+                            $("#button").hide();
+                            $("#please").hide();
+                        }
+                        else if (input === "scissors" && computerchoice === "rock") {
+                            var input = $("#input").val();
+                            $("#record").append("Computer Win!");
+                            $("#button").hide();
+                            $("#please").hide();
+                        });
